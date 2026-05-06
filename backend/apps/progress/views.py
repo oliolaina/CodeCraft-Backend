@@ -22,6 +22,18 @@ class UserProgressListView(APIView):
         return Response(serializer.data)
 
 
+class MarkLessonCompletedView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def post(self, request):
+        serializer = MarkCompletedSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        lesson = get_object_or_404(Lesson, pk=serializer.validated_data["lesson_id"])
+        progress, created = UserProgress.objects.get_or_create(user=request.user, lesson=lesson)
+        code = status.HTTP_201_CREATED if created else status.HTTP_200_OK
+        return Response(UserProgressSerializer(progress).data, status=code)
+
+
 class CourseProgressPercentView(APIView):
     permission_classes = [IsAuthenticated]
 
