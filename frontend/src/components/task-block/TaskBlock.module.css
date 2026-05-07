@@ -1,0 +1,44 @@
+.wrap {
+  margin: 24px 0;
+  padding: 20px;
+  border-radius: 12px;
+  border: 1px solid rgba(0, 240, 177, 0.35);
+  background: rgba(47, 87, 107, 0.25);
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin: 16px 0;
+}
+
+.radio {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  color: #bbfae9;
+  font-family: Comfortaa, sans-serif;
+}
+
+.input,
+.textarea {
+  width: 100%;
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #2f576b;
+  background: #1a2f3a;
+  color: #fff;
+  font-family: inherit;
+  box-sizing: border-box;
+}
+
+.textarea {
+  resize: vertical;
+}
+
+.actions {
+  margin-top: 12px;
+}

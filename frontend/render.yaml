@@ -1,0 +1,10 @@
+# render.yaml
+services:
+  - type: web
+    name: codecraft-frontend
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: NODE_ENV
+        value: production

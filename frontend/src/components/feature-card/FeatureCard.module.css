@@ -1,0 +1,45 @@
+.card {
+  border-radius: 52px;
+  padding: 40px 32px;
+  background: linear-gradient(135deg, #00f0b06d 0%, #4279bd2f 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 35%;
+  margin: 0 0 24px 0;
+  transition: transform 0.3s ease;
+  transform: scale(1);
+}
+
+.card:hover {
+  background: linear-gradient(135deg, #00f0b095 0%, #4279bd4a 100%);
+  transform: scale(1.02);
+}
+
+.title {
+  font-family: 'Ubuntu Sans', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  color: #fd9e02;
+  margin-bottom: 16px;
+}
+.text {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 18px;
+  color: #cccccc;
+}
+
+@media (max-width: 1224px) {
+  .card {
+    width: 100%;
+    padding: 12px 4px;
+    border-radius: 16px;
+  }
+  .title {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+  .text {
+    font-size: 12px;
+  }
+}

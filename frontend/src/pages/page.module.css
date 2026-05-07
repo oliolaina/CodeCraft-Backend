@@ -1,0 +1,55 @@
+@keyframes rotateAndScale {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  50% {
+    transform: rotate(180deg) scale(1.5);
+  }
+  100% {
+    transform: rotate(360deg) scale(1);
+  }
+}
+body,
+.page {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background: #013047;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+.main {
+  flex: 1;
+  width: 1224px;
+  margin: auto;
+}
+.page::selection {
+  background: rgba(0, 73, 95, 0.2);
+  opacity: 30%;
+}
+.loader {
+  margin: 15px;
+  animation: rotateAndScale 4s ease-in-out infinite;
+}
+@media (max-width: 1224px) {
+  .page {
+    padding: 0;
+  }
+  .main {
+    flex: 1;
+    width: 512px;
+    margin: auto;
+  }
+  .catalog_icon {
+    width: 58px;
+    height: 58px;
+  }
+}
+.lessonHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  margin: 0 0 30px;
+  gap: 0;
+}

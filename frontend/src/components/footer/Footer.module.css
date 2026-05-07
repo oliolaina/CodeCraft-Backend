@@ -1,0 +1,39 @@
+.footer {
+  width: 100%;
+  background: #0a212b;
+  border-radius: 19px;
+  padding: 0 30px;
+  height: 84px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  margin: 0;
+}
+.logo {
+  font-family: 'Jaldi', sans-serif;
+  font-size: 24px;
+  color: #78a196;
+  text-shadow: 0 1px 0 #78a196;
+}
+.copyright {
+  font-family: 'Comfortaa', sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #78a196;
+  text-align: right;
+}
+
+@media (max-width: 1224px) {
+  .footer {
+    padding: 0 8px;
+    height: 48px;
+    border-radius: 8px;
+  }
+  .logo {
+    font-size: 12px;
+  }
+  .copyright {
+    font-size: 10px;
+  }
+}
