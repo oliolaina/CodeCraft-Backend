@@ -3,7 +3,7 @@ services:
   - type: web
     name: codecraft-frontend
     env: static
-    buildCommand: npm run build
+    buildCommand: npm ci --no-audit --no-fund && npm run build
     staticPublishPath: ./dist
     envVars:
       - key: NODE_ENV
