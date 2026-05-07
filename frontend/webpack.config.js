@@ -56,7 +56,13 @@ module.exports = {
       inject: true,
       publicPath: '/'
     }),
-    new Dotenv()
+    new Dotenv({
+      path: path.resolve(__dirname, '.env'),
+      // В CI (Render) файла .env нет — не считать это ошибкой.
+      silent: true,
+      // Подставлять переменные из окружения хоста (Render Build Environment Variables).
+      systemvars: true
+    })
   ],
   resolve: {
     extensions: [
