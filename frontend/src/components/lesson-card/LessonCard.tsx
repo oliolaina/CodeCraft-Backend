@@ -3,7 +3,7 @@ import styles from './LessonCard.module.css';
 import cpp_easy from '../../assets/images/topic_cards/cpp_easy.svg';
 import cpp_medium from '../../assets/images/topic_cards/cpp_medium.svg';
 import cpp_hard from '../../assets/images/topic_cards/cpp_hard.svg';
-import python_easy from '../../assets/images/topic_cards/python_easy.svg';
+import python_easy from '../../assets/images/topic_cards/python_easy.png';
 import python_medium from '../../assets/images/topic_cards/python_medium.svg';
 import python_hard from '../../assets/images/topic_cards/python_hard.svg';
 

@@ -6,7 +6,7 @@ import { Button } from '../../components/button';
 import { Text } from '../../components/typography';
 import styles from '../page.module.css';
 import profile_image from '../../assets/images/profile_image.svg';
-import python_logo from '../../assets/images/python_logo.png';
+import python_logo from '../../assets/images/logo.svg';
 import { useAuth } from '../../contexts/UserContext';
 import { listCourses, getCourseCompletionPercent } from '../../api/coursesApi';
 import type { Course } from '../../api/types';
