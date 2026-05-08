@@ -4,6 +4,9 @@ set -e
 echo "[backend] Running migrations..."
 python manage.py migrate --noinput
 
+echo "[backend] Collecting static files..."
+python manage.py collectstatic --noinput
+
 if [ "${AUTO_CREATE_ADMIN:-1}" = "1" ]; then
   ADMIN_USERNAME="${DJANGO_SUPERUSER_USERNAME:-admin}"
   ADMIN_PASSWORD="${DJANGO_SUPERUSER_PASSWORD:-adminadmin}"

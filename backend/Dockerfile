@@ -10,6 +10,9 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 COPY requirements.txt /app/requirements.txt
+RUN python -c "from pathlib import Path; p=Path('/app/requirements.txt'); b=p.read_bytes(); \
+txt = b.decode('utf-16-le') if b'\x00' in b else b.decode('utf-8', errors='replace'); \
+p.write_text(txt, encoding='utf-8')"
 RUN pip install --no-cache-dir -r /app/requirements.txt
 
 COPY . /app
