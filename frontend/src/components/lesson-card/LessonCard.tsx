@@ -1,9 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import styles from './LessonCard.module.css';
 import cpp_easy from '../../assets/images/topic_cards/cpp_easy.svg';
 import cpp_medium from '../../assets/images/topic_cards/cpp_medium.svg';
 import cpp_hard from '../../assets/images/topic_cards/cpp_hard.svg';
-import python_easy from '../../assets/images/topic_cards/python_easy.png';
+import python_easy from '../../assets/images/topic_cards/python_easy1.svg';
 import python_medium from '../../assets/images/topic_cards/python_medium.svg';
 import python_hard from '../../assets/images/topic_cards/python_hard.svg';
 
@@ -55,9 +56,9 @@ export const LessonCard: React.FC<LessonCardProps> = ({
   const cardClasses = `${styles.card} ${getLevelClass()}`;
 
   return (
-    <a
+    <Link
       className={cardClasses}
-      href={to}
+      to={to}
       style={background ? { background } : {}}
     >
       <div className={styles.icon}>
@@ -70,6 +71,6 @@ export const LessonCard: React.FC<LessonCardProps> = ({
         </div>
         <div className={styles.description}>{description}</div>
       </div>
-    </a>
+    </Link>
   );
 };
